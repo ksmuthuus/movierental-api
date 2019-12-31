@@ -1,0 +1,1 @@
+contains application diag logs
