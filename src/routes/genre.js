@@ -1,6 +1,7 @@
 const express = require("express");
 const auth = require("../middlewares/auth");
 const admin = require("../middlewares/admin");
+const validaObjectId = require('../middlewares/validateObjectId')
 //const asyncMiddleware = require('../middlewares/async')
 
 const {
@@ -21,7 +22,7 @@ router.get("/", async (req, res) => {
 });
 
 //GET specific Generas
-router.get("/:id", async (req, res) => {
+router.get("/:id", validaObjectId, async (req, res) => {
   const genre = await Genre.findById(req.params.id);
   if (!genre) {
     throw new Error('Genre Not Found')
@@ -33,6 +34,7 @@ router.get("/:id", async (req, res) => {
 router.post("/", auth, async (req, res) => {
   //Validate payload
   const validated = validate(req.body);
+
   if (validated.error)
     throw new Error(validated.error)
 

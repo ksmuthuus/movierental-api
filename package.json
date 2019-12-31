@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --watchAll",
+    "test": "jest --watchAll --verbose --coverage",
     "start": "node src/app.js",
     "dev": "nodemon src/app.js"
   },
@@ -34,6 +34,6 @@
   },
   "jest": {
     "testEnvironment": "node",
-    "verbose": "true"
+    "verbose": true
   }
 }

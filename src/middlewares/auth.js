@@ -3,7 +3,6 @@ const config = require('config')
 
 module.exports = function auth(req, res, next) {
   const token = req.header('x-auth-token')
-  console.log('TOKEN: ', token)
   if (!token)
     throw new Error('Access denied! Missing Auth Token header: x-auth-token')
 

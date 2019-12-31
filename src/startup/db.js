@@ -4,7 +4,6 @@ const config = require('config')
 
 module.exports = function () {
   const url = config.get('mongoUri')
-  console.log(url)
   mongoose.connect(url, {
       useNewUrlParser: true,
       useUnifiedTopology: true
