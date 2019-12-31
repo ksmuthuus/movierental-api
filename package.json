@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --watchAll --verbose --coverage",
+    "test": "cross-env NODE_ENV=test jest --watchAll --verbose --coverage",
     "start": "node src/app.js",
     "dev": "nodemon src/app.js"
   },
@@ -32,6 +32,7 @@
     "winston-mongodb": "^5.0.1"
   },
   "devDependencies": {
+    "cross-env": "^6.0.3",
     "jest": "^24.9.0",
     "nodemon": "^2.0.2",
     "supertest": "^4.0.2"
