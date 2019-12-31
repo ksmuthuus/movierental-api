@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const winston = require('winston')
+const logger = require('./logger')
 
 module.exports = function () {
   const url = "mongodb://localhost:27017/MovieRental";
@@ -8,6 +8,6 @@ module.exports = function () {
       useUnifiedTopology: true
     })
     .then(() => {
-      winston.info('MongoDB Connection Succeeded!')
+      logger.info('MongoDB Connection Succeeded!')
     })
 }
