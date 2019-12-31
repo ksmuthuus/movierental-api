@@ -9,7 +9,7 @@ module.exports = function () {
       useUnifiedTopology: true
     })
     .then(() => {
-      logger.debug(`'MongoDB Connection Succeeded for ${url}`)
+      logger.info(`'MongoDB Connection Succeeded for ${url}`)
     })
     .catch(err => {
       logger.error('Failed to connect to DB ', err)

@@ -38,8 +38,8 @@ if (process.env.NODE_ENV !== 'production' && process.env.NODE_ENV !== 'test') {
 }
 
 //Workaround for unhandled Rejection
-process.on('unhandledRejection', (ex) => {
-  throw ex;
-});
+// process.on('unhandledRejection', (ex) => {
+//   throw ex;
+// });
 
 module.exports = logger
