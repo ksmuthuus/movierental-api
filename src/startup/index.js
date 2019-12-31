@@ -6,6 +6,7 @@ require('./logger')
 require('./routes')(app)
 require('./db')()
 require('./config')()
+require('./prod')(app)
 
 
 module.exports = app
