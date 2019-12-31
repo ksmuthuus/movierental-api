@@ -1,10 +1,7 @@
-const express = require("express");
-require("express-async-errors");
-const app = express();
-require('./startup/routes')(app)
-require('./startup/db')()
-require('./startup/config')()
-const logger = require('./startup/logger')
+const {
+  app,
+  logger
+} = require('./startup')
 
 const port = process.env.NODE_PORT || 3000;
 app.listen(port, () => {
