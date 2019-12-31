@@ -1,0 +1,5 @@
+{
+    "port": "NODE_PORT",
+    "jwtPrivateKey": "movierental_jwtPrivateKey",
+    "mongoUri": "movierental_mongoUri"
+}
