@@ -1,5 +1,15 @@
 {
-    "name": "Default Configuration",
-    "port": 3000,
-    "jwtPrivateKey": "MyPrivateKey"
+    "log": {
+        "name": "movierental-node-config",
+        "level": "debug"
+    },
+    "db": {
+        "uri": "mongodb://localhost:27017/MovieRental"
+    },
+    "web": {
+        "port": 3000
+    },
+    "app": {
+        "jwtPrivateKey": "MyPrivateKey"
+    }
 }

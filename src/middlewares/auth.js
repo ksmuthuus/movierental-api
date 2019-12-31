@@ -6,7 +6,7 @@ module.exports = function auth(req, res, next) {
   if (!token)
     throw new Error('Access denied! Missing Auth Token header: x-auth-token')
 
-  const decoded = jwt.verify(token, config.get('jwtPrivateKey'))
+  const decoded = jwt.verify(token, config.get('app.jwtPrivateKey'))
   req.user = decoded
   next()
 }

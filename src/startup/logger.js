@@ -1,7 +1,8 @@
 const winston = require('winston');
+const config = require('config')
 
 const logger = winston.createLogger({
-  level: 'info',
+  level: config.get('log.level'),
   format: winston.format.json(),
   defaultMeta: {
     service: 'movierental-api'

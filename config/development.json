@@ -1,6 +1,3 @@
 {
-    "name": "Development Configuration",
-    "port": 3000,
-    "jwtPrivateKey": "MyPrivateKey1",
-    "mongoUri": "mongodb://localhost:27017/MovieRental"
+
 }

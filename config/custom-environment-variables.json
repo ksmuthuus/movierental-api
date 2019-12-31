@@ -1,5 +1,8 @@
 {
-    "port": "NODE_PORT",
-    "jwtPrivateKey": "movierental_jwtPrivateKey",
-    "mongoUri": "movierental_mongoUri"
+    "db": {
+        "uri": "MONGODB_URI"
+    },
+    "app": {
+        "jwtPrivateKey": "JWT_PRIVATE_KEY"
+    }
 }

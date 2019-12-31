@@ -33,7 +33,7 @@ userSchema.methods.generateAuthToken = function () {
   const token = jwt.sign({
     id: this._id,
     isAdmin: this.isAdmin
-  }, config.get('jwtPrivateKey'))
+  }, config.get('app.jwtPrivateKey'))
   return token
 }
 
